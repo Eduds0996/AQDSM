@@ -53,6 +53,7 @@ class Card {
 	private Suit suit;
 	private int number;
 }
+
 class Deck {
 	public Deck( ) {
 		cards = new ArrayList<Card>( );
@@ -69,6 +70,16 @@ class Deck {
 		// shuffle it!
 		Collections.shuffle(cards, new Random( ));
 	}
+	
+	
+	public static synchronized Deck getInstance() {
+		Deck obj = null;
+		if(obj == null) {
+			obj = new Deck();
+		}
+		return obj;
+	}
+	
 	public void print( ) {
 		for(Card card: cards) {
 			card.print( );
@@ -76,3 +87,4 @@ class Deck {
 	}
 	private List<Card> cards;
 }
+

@@ -43,5 +43,5 @@ public abstract class Pizzaiolo {
 
 	public abstract Calzone calzone();
 
-	  public abstract Pizza pizza();
+	public abstract Pizza pizza();
 }	
