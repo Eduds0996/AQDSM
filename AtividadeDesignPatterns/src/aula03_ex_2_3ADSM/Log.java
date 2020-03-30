@@ -2,5 +2,5 @@ package aula03_ex_2_3ADSM;
 
 public interface Log {
 	
-	public void log();
+	public String log();
 }
