@@ -1,6 +1,5 @@
 package aula04_ex_6_2ADSM;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public abstract class TesteOrdena {
@@ -11,28 +10,26 @@ public abstract class TesteOrdena {
 		Random random =  new Random();
 		int numero = random.nextInt(4);
 		
+		
 		if(numero == 0) {
-			Ordem.bolha(v);
-			System.out.println("Metodo escolhido para ordenação Bubble Sort: ");
-			System.out.println(Arrays.toString(v));
+			BubbleSort sorte = new BubbleSort();
+			sorte.sort(v);
 		}
 		if(numero == 1) {
-			Ordem.insercao(v);
-			System.out.println("Metodo escolhido para ordenação Insertion Sort: ");
-			System.out.println(Arrays.toString(v));
+			SelectionSort sorte = new SelectionSort();
+			sorte.sort(v);
 		}
 		if(numero == 2) {
-			Ordem.selecao(v);
-			System.out.println("Metodo escolhido para ordenação Selection Sort: ");
-			System.out.println(Arrays.toString(v));
+			InsertionSort sorte = new InsertionSort();
+			sorte.sort(v);
 		}
 		if(numero == 3) {
-			Ordem.quicksort(v, 0, 9);
-			System.out.println("Metodo escolhido para ordenação Quick Sort: ");
-			System.out.println(Arrays.toString(v));
-			
+			QuickSort sorte = new QuickSort();
+			sorte.sort(v);
+		
 		}
-		System.out.println("\n" + numero);
+		
+		System.out.println("\n " + numero);
 
 	}
 
